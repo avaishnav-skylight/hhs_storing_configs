@@ -1,0 +1,20 @@
+[
+  {
+    "department": "National Institutes of Health",
+    "dept_abbr": "NIH",
+    "as_id": "AS164",
+    "division": "Center for Information Technology",
+    "ip_range": "128.231.0.0/16",
+    "security_zone": "Internal",
+    "status": "Active"
+  },
+  {
+    "department": "National Institutes of Health",
+    "dept_abbr": "NIH",
+    "as_id": "AS164",
+    "division": "National Cancer Institute",
+    "ip_range": "129.43.0.0/16",
+    "security_zone": "DMZ",
+    "status": "Active"
+  }
+]

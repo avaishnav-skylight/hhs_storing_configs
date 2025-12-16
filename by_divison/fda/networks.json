@@ -1,0 +1,20 @@
+[
+  {
+    "department": "Food and Drug Administration",
+    "dept_abbr": "FDA",
+    "as_id": "AS32456",
+    "division": "Office of Digital Transformation",
+    "ip_range": "162.129.0.0/16",
+    "security_zone": "Cloud-Hybrid",
+    "status": "Active"
+  },
+  {
+    "department": "Food and Drug Administration",
+    "dept_abbr": "FDA",
+    "as_id": "AS32456",
+    "division": "Center for Drug Evaluation and Research",
+    "ip_range": "192.149.200.0/24",
+    "security_zone": "Restricted",
+    "status": "Review"
+  }
+]

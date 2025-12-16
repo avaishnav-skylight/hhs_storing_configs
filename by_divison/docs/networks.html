@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Squad Asset Groups</title>
+
+  <!-- Tabulator CSS -->
+  <link
+    href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      padding: 2rem;
+    }
+    #filter {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Squad Asset Groups</h1>
+
+  <!-- Global filter -->
+  <input id="filter" type="text" placeholder="Filter all columns..." />
+
+  <!-- Table -->
+  <div id="table"></div>
+
+  <!-- Tabulator JS -->
+  <script src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script>
+
+  <script>
+    /*
+      Place your JSON files in the repo, for example:
+      /data/squad-alpha.json
+      /data/squad-bravo.json
+      /data/squad-charlie.json
+    */
+
+    const jsonFiles = [
+      '../generated/networks.json',
+    ];
+
+    async function loadAllData() {
+      const responses = await Promise.all(
+        jsonFiles.map((file) => fetch(file).then((res) => res.json()))
+      );
+
+      // Flatten arrays into a single dataset
+      return responses.flat();
+    }
+
+    function createColumns(data) {
+      const keys = new Set();
+      data.forEach(row => Object.keys(row).forEach(k => keys.add(k)));
+
+      return Array.from(keys).map(key => ({
+        title: key,
+        field: key,
+      }));
+    }
+
+    loadAllData().then((data) => {
+      const columns = createColumns(data);
+
+      const table = new Tabulator('#table', {
+        data,
+        columns,
+        layout: 'fitColumns',
+        reactiveData: true,
+        pagination: 'local',
+        paginationSize: 10,
+      });
+
+      // Global filter
+      document.getElementById('filter').addEventListener('input', (e) => {
+        const value = e.target.value.toLowerCase();
+
+        table.setFilter((rowData) =>
+          Object.values(rowData).some((val) =>
+            String(val).toLowerCase().includes(value)
+          )
+        );
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+/*
+How this works:
+- Fetches multiple JSON files
+- Merges them into one dataset
+- Auto-generates columns from all keys found
+- Sorting, filtering, and pagination handled by Tabulator
+
+Perfect for GitHub Pages:
+- Static files only
+- No build step
+- No framework
+*/

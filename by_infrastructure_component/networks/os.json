@@ -1,0 +1,20 @@
+[
+  {
+    "department": "Office of the Secretary",
+    "dept_abbr": "OS",
+    "as_id": "AS32456",
+    "division": "Immediate Office of the Secretary",
+    "ip_range": "158.72.0.0/16",
+    "security_zone": "Executive-Branch-Net",
+    "status": "Active"
+  },
+  {
+    "department": "Office of the Secretary",
+    "dept_abbr": "OS",
+    "as_id": "AS32456",
+    "division": "Office of the Chief Information Officer",
+    "ip_range": "2001:4800:158:72::/64",
+    "security_zone": "Management-VLAN",
+    "status": "Active"
+  }
+]

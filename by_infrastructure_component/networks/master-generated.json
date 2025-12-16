@@ -1,0 +1,72 @@
+[
+  {
+    "department": "Office of the Secretary",
+    "dept_abbr": "OS",
+    "as_id": "AS32456",
+    "division": "Immediate Office of the Secretary",
+    "ip_range": "158.72.0.0/16",
+    "security_zone": "Executive-Branch-Net",
+    "status": "Active",
+    "source_origin": "os.json"
+  },
+  {
+    "department": "Office of the Secretary",
+    "dept_abbr": "OS",
+    "as_id": "AS32456",
+    "division": "Office of the Chief Information Officer",
+    "ip_range": "2001:4800:158:72::/64",
+    "security_zone": "Management-VLAN",
+    "status": "Active",
+    "source_origin": "os.json"
+  },
+  {
+    "department": "National Institutes of Health",
+    "dept_abbr": "NIH",
+    "as_id": "AS164",
+    "division": "Center for Information Technology",
+    "ip_range": "128.231.0.0/16",
+    "security_zone": "Internal",
+    "status": "Active",
+    "source_origin": "nih.json"
+  },
+  {
+    "department": "National Institutes of Health",
+    "dept_abbr": "NIH",
+    "as_id": "AS164",
+    "division": "National Cancer Institute",
+    "ip_range": "129.43.0.0/16",
+    "security_zone": "DMZ",
+    "status": "Active",
+    "source_origin": "nih.json"
+  },
+  {
+    "department": "Food and Drug Administration",
+    "dept_abbr": "FDA",
+    "as_id": "AS32456",
+    "division": "Office of Digital Transformation",
+    "ip_range": "162.129.0.0/16",
+    "security_zone": "Cloud-Hybrid",
+    "status": "Active",
+    "source_origin": "fda.json"
+  },
+  {
+    "department": "Food and Drug Administration",
+    "dept_abbr": "FDA",
+    "as_id": "AS32456",
+    "division": "Center for Drug Evaluation and Research",
+    "ip_range": "192.149.200.0/24",
+    "security_zone": "Restricted",
+    "status": "Review",
+    "source_origin": "fda.json"
+  },
+  {
+    "department": "Health Resources and Services Administration",
+    "dept_abbr": "HRSA",
+    "as_id": "AS11082",
+    "division": "Bureau of Primary Health Care",
+    "ip_range": "158.70.0.0/16",
+    "security_zone": "Public-Facing",
+    "status": "Active",
+    "source_origin": "hrsa.json"
+  }
+]

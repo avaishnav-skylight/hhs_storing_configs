@@ -1,0 +1,11 @@
+[
+  {
+    "department": "Health Resources and Services Administration",
+    "dept_abbr": "HRSA",
+    "as_id": "AS11082",
+    "division": "Bureau of Primary Health Care",
+    "ip_range": "158.70.0.0/16",
+    "security_zone": "Public-Facing",
+    "status": "Active"
+  }
+]
