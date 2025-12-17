@@ -27,7 +27,12 @@ The purpose of each is to orient the info either by the divisions within HHS or 
 
 #### GitHub Workflows To Create A Master List
 
+`.github/workflows/ci.yml` has an outline of a workflow that creates a master list of all the network configs. 
+This master list is then fed into the HTML table linked in the next section.
+
 #### PoC Showing The Info In A Human Friendly Format
+
+The JSON blocks have been transformed into a simple HTML table at [Sample HHS Network Outline](https://avaishnav-skylight.github.io/hhs_storing_configs/).
 
 ## What Is Not Covered
 
